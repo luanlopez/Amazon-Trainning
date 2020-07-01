@@ -1,0 +1,18 @@
+#Stock-feed-for-Amazon 
+
+<?xml version="1.0" encoding="utf-8"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+    <Header>
+        <DocumentVersion>1.01</DocumentVersion> //DocumentVersion é a versão do documento então você passa 1.01 por padrão da AMAZON
+        <MerchantIdentifier>AXXXXXXXXXX</MerchantIdentifier> //Identificador do Vendedor na AMAZON
+    </Header>
+    <MessageType>Inventory</MessageType>//O tipo de operação que você está fazendo é Estoque, então vai passar o Inventory!
+        <Message>
+            <MessageID>1</MessageID> // MessageID por padrão da AMAZON se passa o número 1
+            <OperationType>Update</OperationType> // Aqui passa update pois você vai tar atualizando o estoque do produto!
+            <Inventory>
+                <SKU>SKU DO PRODUTO</SKU>  // SKU DO PRODUTO 
+                <Quantity>${kplSku.SaldoDisponivel}</Quantity> // Quantidade nova daquele produto
+            </Inventory>
+        </Message>
+</AmazonEnvelope>
