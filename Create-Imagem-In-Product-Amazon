@@ -1,0 +1,20 @@
+#Image-of-Product-Feed
+
+<?xml version="1.0" encoding="utf-8"?>
+		<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+    <Header>
+         <DocumentVersion>1.01</DocumentVersion> //DocumentVersion é a versão do documento então você passa 1.01 por padrão da AMAZON
+        <MerchantIdentifier>AXXXXXXXXXX</MerchantIdentifier> //Identificador do Vendedor na AMAZON
+    </Header>
+    <MessageType>ProductImage</MessageType> // Aqui passa ProductImage, porque voce vai criar a imagem daquele produto na AMAZON
+	<PurgeAndReplace>false</PurgeAndReplace>
+                <Message>
+                    <MessageID>1</MessageID>
+                    <OperationType>Update</OperationType>
+                    <ProductImage>
+                        <SKU>SKU</SKU>
+                        <ImageType>Main</ImageType> // Main porque vai ser a imagem principal do produto
+                        <ImageLocation>IMAGEM</ImageLocation> //Aqui passa o link da imagem que vai ser enviado
+                    </ProductImage>
+                </Message>
+		</AmazonEnvelope>
