@@ -1,0 +1,17 @@
+#Price-feed-for-Amazon 
+
+<?xml version="1.0" encoding="utf-8"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+    <Header>
+        <DocumentVersion>1.01</DocumentVersion> //DocumentVersion é a versão do documento então você passa 1.01 por padrão da AMAZON
+        <MerchantIdentifier>AXXXXXXXXXX</MerchantIdentifier> //Identificador do Vendedor na AMAZON
+    </Header>
+    <MessageType>Price</MessageType> //O tipo de operação que você está fazendo é Preço, então vai passar o Price!
+        <Message>
+            <MessageID>1</MessageID> // MessageID por padrão da AMAZON se passa o número 1
+            <Price>
+                <SKU>SKU DO PRODUTO</SKU> // SKU DO PRODUTO 
+                 <StandardPrice currency="BRL">2,00</StandardPrice> // O novo preço que vai ser, e a moeda para aparecer na plataforma da amazon, no caso a moeda brasileira
+            </Price>
+        </Message>
+</AmazonEnvelope>
