@@ -36,20 +36,20 @@ Send produt feed for amazon
 						<ItemType>Tipo de produto</ItemType> // Tipo de produto, se é um computador ou celular por exemplo	
 						<RecommendedBrowseNode>60583031</RecommendedBrowseNode> //O número dentro da tag é padrão, pois vai reconhecer teu Navegador!				
 					</DescriptionData>
-					<ProductData> // ProductData é a categoria que seu produto vai se encaixar! não é obrigado enviar muita informação. Só o necessário
-							`<Beauty>
-	 				            <ProductType> //ProductType é padrão então sempre você vai coloca-lo abaixo da tua categoria!
-							        <BeautyMisc> //Está é uma das categorias que existe na Amazon. Está é a categoria "Beleza"!
-								            <VariationData>
-                                                    <Parentage>child</Parentage> 
-                                                    <VariationTheme>Size</VariationTheme>
-                                                    <Size>50cm</Size>
-                                            </VariationData>
-											 <UnitCount unitOfMeasure="oz">5</UnitCount> // Quantidade do produto que você está enviando
-							        </BeautyMisc>
-					            </ProductType>
-			                </Beauty>`
-					</ProductData>
-				</Product>
-			</Message>
+				<ProductData> // ProductData é a categoria que seu produto vai se encaixar! não é obrigado enviar muita informação. Só o necessário
+					<Beauty>
+	 				     <ProductType> //ProductType é padrão então sempre você vai coloca-lo abaixo da tua categoria!
+						<BeautyMisc> //Está é uma das categorias que existe na Amazon. Está é a categoria "Beleza"!
+							<VariationData>
+                                                    		<Parentage>child</Parentage> 
+                                                    		<VariationTheme>Size</VariationTheme>
+                                                    		<Size>50cm</Size>
+                                            		</VariationData>
+							 <UnitCount unitOfMeasure="oz">5</UnitCount> // Quantidade do produto que você está enviando
+						</BeautyMisc>
+					     </ProductType>
+			               </Beauty>
+				</ProductData>
+			</Product>
+		</Message>
     </AmazonEnvelope>
